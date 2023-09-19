@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "oxkZkTVFwGhIU1VoakQAE38StUTsO3POhmxVsHuVT58=",
+  "Source": "net-core-backend-api",
+  "BasePath": "_content/net-core-backend-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

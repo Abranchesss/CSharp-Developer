@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Euclid Circular B', sans-serif !important;
+    src: url("assets/fontes/EuclidCircularB-Regular.otf") format("opentype");
+}
+
+html, body { height: 100%; background: #F1F1F1;}
+body { margin: 0; font-family: 'Euclid Circular B', sans-serif !important;  padding-bottom: 2rem !important;}
+
+.container {
+    margin: 2rem 3.5rem;
+}
+
+.card {
+    padding: 2rem;
+    box-shadow: 0 5px 8px 1px #cacaca !important;
+    border-radius: 10px !important;
+    margin-bottom: 2rem;
+}
+
+.card mat-card-title {
+    display: flex;
+    align-items: center;
+}
+
+.card mat-card-title img {
+    height: 1.5rem;
+    margin-right: .7rem;
+}

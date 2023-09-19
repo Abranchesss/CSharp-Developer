@@ -1,0 +1,7 @@
+C:\Users\GuiCode\Desktop\ECOMERCE\CSharp-Developer\CalcularFreteAPI\CalcularFreteAPI\obj\Release\net6.0\PubTmp\Out\CalcularFreteAPI.exe
+C:\Users\GuiCode\Desktop\ECOMERCE\CSharp-Developer\CalcularFreteAPI\CalcularFreteAPI\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\GuiCode\Desktop\ECOMERCE\CSharp-Developer\CalcularFreteAPI\CalcularFreteAPI\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\GuiCode\Desktop\ECOMERCE\CSharp-Developer\CalcularFreteAPI\CalcularFreteAPI\obj\Release\net6.0\PubTmp\Out\CalcularFreteAPI.dll
+C:\Users\GuiCode\Desktop\ECOMERCE\CSharp-Developer\CalcularFreteAPI\CalcularFreteAPI\obj\Release\net6.0\PubTmp\Out\CalcularFreteAPI.deps.json
+C:\Users\GuiCode\Desktop\ECOMERCE\CSharp-Developer\CalcularFreteAPI\CalcularFreteAPI\obj\Release\net6.0\PubTmp\Out\CalcularFreteAPI.runtimeconfig.json
+C:\Users\GuiCode\Desktop\ECOMERCE\CSharp-Developer\CalcularFreteAPI\CalcularFreteAPI\obj\Release\net6.0\PubTmp\Out\CalcularFreteAPI.pdb

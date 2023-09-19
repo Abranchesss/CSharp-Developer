@@ -1,0 +1,106 @@
+<div class="container">
+      <div>
+          <h1><strong>Novo Pedido #1</strong></h1>
+          <mat-card class="card">
+              <mat-card-title><img src="../../../assets/icones/icone-cliente.png" alt="Carrinho Icone"><strong>Cliente</strong></mat-card-title>
+              <mat-form-field class="width-50">
+                <input type="text" name="client"
+                        placeholder="Informe um cliente *"
+                        aria-label="Number"
+                        matInput
+                        required="true"
+                        [matAutocomplete]="auto"
+                        [(ngModel)]="client">
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                  <mat-option *ngFor="let option of filteredClientsOptions | async" [value]="option.nome">
+                    {{option.nome}}
+                  </mat-option>
+                </mat-autocomplete>
+                <button *ngIf="client" matSuffix mat-icon-button aria-label="Clear" (click)="client=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+                <mat-icon *ngIf="!client" matSuffix mat-icon-button aria-label="Search">search</mat-icon>
+              </mat-form-field>
+          </mat-card>
+          <mat-card class="card">
+            <mat-card-title><img src="../../../assets/icones/icone-carrinho.png" alt="Carrinho Icone"><strong>Carrinho</strong></mat-card-title>
+            <mat-form-field class="width-50">
+              <input type="text"
+                      placeholder="Pesquise um produto"
+                      aria-label="Number"
+                      matInput name="selected-product"
+                      [matAutocomplete]="auto2"
+                      [(ngModel)]="product">
+              <mat-autocomplete autoActiveFirstOption #auto2="matAutocomplete">
+                <mat-option *ngFor="let option of filteredProductsOptions | async" [value]="option.nome" (click)="addProduct(option)">
+                  {{option.nome}}
+                </mat-option>
+              </mat-autocomplete>
+              <button *ngIf="product" matSuffix mat-icon-button aria-label="Clear" (click)="product=''">
+                <mat-icon>close</mat-icon>
+              </button>
+              <mat-icon *ngIf="!product" matSuffix mat-icon-button aria-label="Search">search</mat-icon>
+            </mat-form-field>
+            <div class="cart">
+              <div class="cart-empty" *ngIf="selectedProducts.length === 0">
+                <img src="../../../assets/icones/imagem-carrinho-empty-state.png" alt="Carringo Vazio">
+                <div>
+                  <p>Carrinho vazio</p>
+                  <p>Nenhum produto foi inserido</p>
+                </div>
+              </div>
+              <div class="cart-not-empty" *ngIf="selectedProducts.length !== 0">
+                <div *ngFor="let pOrder of selectedProducts" class="cart-item">
+                  <mat-divider></mat-divider>
+                  <div class="cart-item-content">
+                    <div>
+                      <img src="{{pOrder.product.imagemUrl}}" alt="">
+                    </div>
+                    <div>
+                      <p>{{pOrder.product.id}}</p>
+                      <p>{{pOrder.product.nome}}</p>
+                    </div>
+                    <div>
+                      <div>
+                        <input type="number" min="1" value="{{pOrder.qtde}}" (change)="updateProductQtde(pOrder)">
+                        <p>&nbsp;&times;{{pOrder.product.precoUnitario.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</p>
+                      </div>
+                      <p>{{(pOrder.qtde * pOrder.product.precoUnitario).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</p>
+                    </div>
+                    <div>
+                      <button mat-mini-fab matTooltip="Accent" color="basic" aria-label="Example mini fab with a heart icon" (click)="removeProduct(pOrder)">
+                        <mat-icon>clear</mat-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <mat-divider></mat-divider>
+              </div>
+            </div>
+        </mat-card>
+        <mat-card class="card">
+          <mat-card-title><img src="../../../assets/icones/icone-total.png" alt="Total Icone"><strong>Total</strong></mat-card-title>
+          <div class="total-card">
+            <div class="total-txts">
+              <div>
+                <p>Itens</p>
+                <p>{{totalValue.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</p>
+              </div>
+              <div>
+                <p>Frete</p>
+                <p>{{totalFrete.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</p>
+              </div>
+              <mat-divider></mat-divider>
+              <div>
+                <p>Total</p>
+                <p>{{total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</p>
+              </div>
+            </div>
+            <div class="total-btns">
+              <button mat-raised-button color="primary" (click)="submitOrder()">Finalizar Pedido</button>
+              <button mat-stroked-button (click)="clearCart()">Limpar Carrinho</button>
+            </div>
+          </div>
+      </mat-card>
+    </div>
+</div>

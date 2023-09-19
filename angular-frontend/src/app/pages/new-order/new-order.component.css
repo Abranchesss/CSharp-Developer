@@ -1,0 +1,116 @@
+.width-50{
+    width: 50%;
+    margin-top: 1rem;
+}
+
+/* Carrinho Vazio */
+
+.cart-empty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cart-empty img {
+    height: 10rem;
+}
+.cart-empty p {
+    color: #919191;
+    text-align: center;
+}
+.cart-empty p:first-child {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.cart-empty p:last-child {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-top: 1.2rem;
+}
+
+/* Carrinho Não Vazio */
+
+.cart-item-content{
+    display: grid;
+    grid-template-columns: 2fr 16fr 2fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.cart-item-content div:first-child img {
+    height: 8rem;
+}
+
+.cart-item-content div:nth-child(2) p:last-child {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.cart-item-content div:nth-child(3) {
+    text-align: end;
+}
+.cart-item-content div:nth-child(3) > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.cart-item-content div:nth-child(3) > div p{
+    margin: 0;
+}
+
+.cart-item-content div:nth-child(3) > p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.cart-item-content div:nth-child(3) input::-webkit-outer-spin-button,
+.cart-item-content div:nth-child(3) input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cart-item-content div:nth-child(3) input{
+    /* Firefox */
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    text-align: center;
+    width: 2rem;
+    height: 1.5rem;
+    padding: 0;
+
+}
+
+/* Total */
+
+.total-card {
+    display: flex;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+.total-card > div {
+    width: 50%;
+}
+
+.total-txts > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-txts mat-divider {
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.total-btns{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.total-btns button{
+    padding: 1.4rem 0;
+}

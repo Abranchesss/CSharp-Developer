@@ -1,0 +1,23 @@
+<header>
+    <nav>
+        <a class="logo" href="#" routerLink="/">
+            <img src="/assets/icones/logotipo-maximatech.png" alt="Logo Máxima Tech">
+        </a>
+        <ul>
+            <li>
+                <button mat-button [matMenuTriggerFor]="menu1">Cadastro<mat-icon aria-hidden="false" aria-label="Arrow Drop Down" fontIcon="arrow_drop_down" iconPositionEnd></mat-icon></button>
+                <mat-menu #menu1="matMenu">
+                  <a mat-menu-item href="#" routerLink="/">Cliente</a>
+                  <a mat-menu-item href="#" routerLink="/">Produto</a>
+                </mat-menu>
+            </li>
+            <li>
+                <button mat-button [matMenuTriggerFor]="menu2">Pedido<mat-icon aria-hidden="false" aria-label="Arrow Drop Down" fontIcon="arrow_drop_down" iconPositionEnd></mat-icon></button>
+                <mat-menu #menu2="matMenu">
+                    <a mat-menu-item href="#" routerLink="/new-order">Novo pedido</a>
+                    <a mat-menu-item href="#" routerLink="/orders">Consulta Pedido</a>
+                </mat-menu>
+            </li>
+        </ul>
+    </nav>
+</header>
